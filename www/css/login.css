@@ -1,0 +1,67 @@
+body
+{
+	font-family: Calibri;
+	font-size:16;
+}
+#outer
+{
+	width:500px;
+	
+	padding:15px;
+	
+	border-width:1px;
+	border-style:solid;
+	border-color:black;
+	
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
+#leftside
+{
+	float:left;
+	
+	width:200px;
+	height:200px;
+	
+	border-width:1px;
+	border-style:dotted;
+	border-color:black;
+}
+
+#rightside
+{
+	float:right;
+	width: 280px;
+	
+}
+
+.row
+{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	padding-top:5px;
+}
+
+.expander
+{
+	flex-grow:1;
+}
+
+.hspacer
+{
+	width:0.5rem;
+}
+
+.vspacer
+{
+	height:1rem;
+}
+
+.bold
+{
+	font-weight:bold;
+}

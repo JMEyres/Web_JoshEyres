@@ -1,14 +1,74 @@
 <html>
 	<head>
 		<title>Welcome!</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		
+		<script>
+		
+			function show(id)
+			{
+				var div = document.getElementById(id);
+				div.style.display="block";
+			}
+			
+			function hide(id)
+			{
+				var div = document.getElementById(id);
+				div.style.display="none";
+			}
+			
+			function closeAllMenus()
+			{
+				hide('projects')
+				hide('hobbies')
+			}
+			
+		</script>
+		
 	</head>
 	<body>
-		<p>Hello and welcome to my site!</p>
-		<p style="font-weight: bold">This site is likely the best place to be</p>
-		<p style="font-style: italic; font-size: 72; font-family: Comic Sans MS"> This should be bigger </p>
+	
+		<div id="header">
+			<div id="headerleft">
+				Welcome to my awesome site
+			</div>
+			
+			<div id="headerright">
+				<a href="index.html">Home</a> | <a href="contact.html">Contact</a> | CV | <a onmouseenter="show('projects')" href="#">Projects</a> |<a onmouseenter="show('hobbies')" href="#" > Hobbies</a>
+			</div>
+		</div>
+		
+		<div id="projects" class ="allMenus" onmouseleave="hide('projects')">
+		
+			<img style="height: 100px" src="images/SwoleSquirrel.jpg">
+			<img style="height: 100px" src="images/SwoleSquirrel.jpg">
+			
+			
+		</div>
+		
+		<div id="hobbies" class ="allMenus" onmouseleave="hide('hobbies')">
+		
+			<img style="height: 100px" src="images/SwoleSquirrel.jpg">
+			<img style="height: 100px" src="images/SwoleSquirrel.jpg">
+			
+			
+		</div>
+		
+		<h1>This is heading 1</h1>
+		<h2>This is heading 2</h2>
+		<h3>This is heading 3</h3>
+		
+		<p><span class="hobby">Hello and welcome to my site!</span></p>
+		<p><span class="hobby">I Like video games </span></p>
+		<p><span class="hobby"> This should be bigger </span></p>
+		
+		<p class = "normaltext">This is just some really normal text</p>
+		<p class = "normaltext" style="color:red">This is just some really normal text but in red</p>
 		
 		<img style ="width:600; height:400"src="images/Aatrox OFA.png">
 		
-		<p>This word is <span style="font-style: italic; color:red">red</span></p>
+		<div id="footer">
+				Made By Josh Eyres
+		</div>
 	</body>
 </html>
