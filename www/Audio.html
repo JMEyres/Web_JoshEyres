@@ -4,22 +4,40 @@
       <title>Some Audio!</title>
 
       <script>
+        var clip = new Audio();
+
         function start()
         {
-          var clip = new Audio();
           clip.src = "Audio/shot.wav";
 
-          clip.addEventListener("canplaythrough", function()
+          clip.addEventListener("canplaythrough", doThisWhenClipLoaded);
+
+          clip.addEventListener("ended",doThisWhenEnded);
+
+          function doThisWhenClipLoaded()
           {
             alert("Loaded all the audio!");
             clip.play();
-          });
+          }
+
+          function doThisWhenEnded()
+          {
+            alert("The sound has finished now!");
+          }
         }
       </script>
   </head>
 
   <body>
-    <input href="#" type="submit" onclick="start()"> </input>
+    <input href="#" style="background: red; color:white; width:200px; height:50px" type="submit" onclick="start()"> </input>
+
+    <br>
+
+    <audio id="myAudio" controls>
+      <source src = "Audio/music.ogg" type ="audio/wav">
+        <!<source src = "Audio/music.ogg" type ="audio/wav" This will keep trying each audio file until one works>
+    </audio>
+
   </body>
 
 </html>
